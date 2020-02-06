@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nuX-Bd-8z4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Yazılar-->
+        <scene sceneID="pLC-Sc-MnF">
+            <objects>
+                <viewController id="usm-aS-unx" customClass="ViewController" customModule="WKWebView_Advanced" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Dq-Sq-xr1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TIR-6B-6Je">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="n2U-WL-jP3">
+                                    <size key="itemSize" width="374" height="234"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="16" maxX="0.0" maxY="16"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ArticleCell" id="Woz-0X-eBR" customClass="ArticleCollectionViewCell" customModule="WKWebView_Advanced" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="16" width="374" height="234"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="234"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3b8-0i-5Ir">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="234"/>
+                                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <wkWebViewConfiguration key="configuration">
+                                                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                        <wkPreferences key="preferences"/>
+                                                    </wkWebViewConfiguration>
+                                                </wkWebView>
+                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2cO-Vb-wOF">
+                                                    <rect key="frame" x="0.0" y="162" width="374" height="72"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1Cf-Na-IFa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="72"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Rgt-cs-8Xx">
+                                                                <rect key="frame" x="14" y="14" width="116" height="44"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yazar Adı" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9f-Fb-9Vf">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="116" height="14.5"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                                        <color key="textColor" white="0.22" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yazı Başlığı" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sF6-Ks-ahL">
+                                                                        <rect key="frame" x="0.0" y="17.5" width="116" height="26.5"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="Rgt-cs-8Xx" firstAttribute="top" secondItem="1Cf-Na-IFa" secondAttribute="top" constant="14" id="2u4-gu-hTz"/>
+                                                            <constraint firstItem="Rgt-cs-8Xx" firstAttribute="leading" secondItem="1Cf-Na-IFa" secondAttribute="leading" constant="14" id="ZQt-me-pTL"/>
+                                                            <constraint firstItem="Rgt-cs-8Xx" firstAttribute="centerY" secondItem="1Cf-Na-IFa" secondAttribute="centerY" id="d5y-MK-w2s"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <blurEffect style="prominent"/>
+                                                </visualEffectView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="3b8-0i-5Ir" firstAttribute="bottom" secondItem="2cO-Vb-wOF" secondAttribute="bottom" id="4Ki-A3-9vK"/>
+                                            <constraint firstItem="3b8-0i-5Ir" firstAttribute="top" secondItem="Woz-0X-eBR" secondAttribute="topMargin" constant="-8" id="4k9-PN-h8N"/>
+                                            <constraint firstItem="3b8-0i-5Ir" firstAttribute="trailing" secondItem="2cO-Vb-wOF" secondAttribute="trailing" id="9Bv-ub-zNQ"/>
+                                            <constraint firstItem="3b8-0i-5Ir" firstAttribute="centerX" secondItem="Woz-0X-eBR" secondAttribute="centerX" id="HNa-ea-SOp"/>
+                                            <constraint firstItem="3b8-0i-5Ir" firstAttribute="leading" secondItem="2cO-Vb-wOF" secondAttribute="leading" id="Ijk-dS-Uws"/>
+                                            <constraint firstItem="3b8-0i-5Ir" firstAttribute="leading" secondItem="Woz-0X-eBR" secondAttribute="leadingMargin" constant="-8" id="Nka-fw-4sA"/>
+                                            <constraint firstItem="3b8-0i-5Ir" firstAttribute="centerY" secondItem="Woz-0X-eBR" secondAttribute="centerY" id="hGh-vf-PUc"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="j9f-Fb-9Vf" id="pE9-8G-F1m"/>
+                                            <outlet property="titleLabel" destination="sF6-Ks-ahL" id="MNf-uA-QvS"/>
+                                            <outlet property="webView" destination="3b8-0i-5Ir" id="ELT-2c-yDW"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="usm-aS-unx" id="7te-7C-Dbi"/>
+                                    <outlet property="delegate" destination="usm-aS-unx" id="MW2-y7-lGD"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TIR-6B-6Je" firstAttribute="centerX" secondItem="3Dq-Sq-xr1" secondAttribute="centerX" id="Ac3-su-Q2g"/>
+                            <constraint firstItem="TIR-6B-6Je" firstAttribute="leading" secondItem="xAV-Jf-YBq" secondAttribute="leading" id="keQ-1G-qDr"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="TIR-6B-6Je" secondAttribute="bottom" constant="-34" id="mfb-dd-WFn"/>
+                            <constraint firstItem="TIR-6B-6Je" firstAttribute="top" secondItem="xAV-Jf-YBq" secondAttribute="top" id="pjW-EI-eJX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xAV-Jf-YBq"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Yazılar" id="Hyf-Ou-Z4g"/>
+                    <connections>
+                        <segue destination="WAf-zE-4hA" kind="show" identifier="toArticleVC" id="ppM-8B-KfH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zLZ-zi-sio" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
+        </scene>
+        <!--ArticleVC-->
+        <scene sceneID="spR-Vg-Ufx">
+            <objects>
+                <viewController id="WAf-zE-4hA" customClass="ArticleVC" customModule="WKWebView_Advanced" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QzC-aM-kL2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Avh-KE-g8A">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Avh-KE-g8A" firstAttribute="top" secondItem="xmG-ha-E5g" secondAttribute="top" id="54H-Va-1dh"/>
+                            <constraint firstItem="Avh-KE-g8A" firstAttribute="leading" secondItem="xmG-ha-E5g" secondAttribute="leading" id="DAo-cD-VeU"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Avh-KE-g8A" secondAttribute="bottom" constant="-34" id="nZJ-ww-i10"/>
+                            <constraint firstItem="Avh-KE-g8A" firstAttribute="centerX" secondItem="QzC-aM-kL2" secondAttribute="centerX" id="xLG-SA-e1F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xmG-ha-E5g"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DmV-lQ-WLY"/>
+                    <connections>
+                        <outlet property="webView" destination="Avh-KE-g8A" id="Fiq-SO-we7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OSA-yU-7WS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912" y="113"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rth-2f-YYU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nuX-Bd-8z4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7ml-PK-q1i">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="usm-aS-unx" kind="relationship" relationship="rootViewController" id="l3T-6w-F6o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xYq-Mb-0Xb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="187" y="113"/>
+        </scene>
+    </scenes>
+</document>
